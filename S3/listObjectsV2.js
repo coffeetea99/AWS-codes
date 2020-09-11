@@ -8,8 +8,8 @@ const S3 = new AWS.S3();
 
 S3.listObjectsV2(
     {
-        Bucket: config.S3.bucket,
-        Prefix: 'nShopImage',
+        Bucket: config.S3.bucket,   // 버킷 이름
+        Prefix: 'nShopImage',       // 경로
     },
     (err, data) => {
         if (err) {
@@ -22,9 +22,8 @@ S3.listObjectsV2(
     }
 );
 
-// Sample Output
-
 /*
+Sample Output
 {
     Key: 'nShopImage/',
     LastModified: 2020-07-14T02:40:26.000Z,
